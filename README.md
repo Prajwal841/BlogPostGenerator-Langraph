@@ -9,6 +9,12 @@ This project demonstrates a **modular workflow** using **schemas, chains, tool e
 ---
 <img width="1872" height="867" alt="image" src="https://github.com/user-attachments/assets/657088dc-7623-4a59-9c6a-21d0f33e32b3" />
 
+
+
+https://github.com/user-attachments/assets/821c1197-6a5b-411f-83f5-24ec013aeed0
+
+
+
 ## **Key Components**
 
 - **Schemas:** Ensure consistent structured outputs (`AnswerQuestion`, `ReviseAnswer`).  
