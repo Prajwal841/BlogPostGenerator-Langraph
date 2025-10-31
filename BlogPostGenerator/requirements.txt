@@ -1,0 +1,17 @@
+langchain
+langchain-openai
+langchain-core
+langchain-community
+langgraph
+pydantic
+google-generativeai
+langchain-google-genai
+python-dotenv
+datetime
+requests
+fastapi
+uvicorn
+aiohttp
+httpx
+langchain-groq
+langchain_tavily
