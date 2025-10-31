@@ -98,21 +98,7 @@ Search references
 Reflection insights
 
 ## Project Flow Diagram
-User Question
-      │
-      ▼
-Responder Chain ──► AI Draft ──┐
-                              ▼
-                     Tool Executor (TavilySearch)
-                              │
-                              ▼
-                      Updated AI Draft
-                              │
-                              ▼
-                       Revisor Chain (Optional)
-                              │
-                              ▼
-                      Final Structured Answer
+User Question -> Responder Chain ──► AI Draft ──> Tool Executor (TavilySearch) ->  Updated AI Draft -> Revisor Chain (Optional) -> Final Structured Answer
 
 ### Key Features
 Structured AI responses with Pydantic schemas
@@ -123,18 +109,17 @@ Single iteration workflow for simplicity and token efficiency
 
 ### File Structure & Key Modules
 BlogPostGenerator/
-│
-├── app.py                  # FastAPI main entry point
-├── graphs/
-│   └── reflexion_graph.py  # Orchestrates AI draft, tool calls, optional revisions
-├── chains/
-│   ├── responder_chain.py  # Generates initial AI draft
-│   └── revisor_chain.py    # Optional refinement of AI answers
-├── tools/
-│   └── executor_tool.py    # Executes search queries (TavilySearch)
-├── schema/
-│   └── schema.py           # Pydantic schemas for structured output
-└── requirements.txt        # Dependencies
+app.py                  # FastAPI main entry point
+graphs/
+  └── reflexion_graph.py  # Orchestrates AI draft, tool calls, optional revisions
+chains/
+  ├── responder_chain.py  # Generates initial AI draft
+    revisor_chain.py    # Optional refinement of AI answers
+tools/
+  └── executor_tool.py    # Executes search queries (TavilySearch)
+schema/
+  └── schema.py           # Pydantic schemas for structured output
+requirements.txt        # Dependencies
 
 Installation
 # Create virtual environment
